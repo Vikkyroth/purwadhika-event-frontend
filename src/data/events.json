@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Event 1",
+    "slug": "event-1",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": "/assets/images/event-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Event 2",
+    "slug": "event-2",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": "/assets/images/event-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Event 3",
+    "slug": "event-3",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": "/assets/images/event-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Event 4",
+    "slug": "event-4",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    "image": "/assets/images/event-4.jpg"
+  }
+]
