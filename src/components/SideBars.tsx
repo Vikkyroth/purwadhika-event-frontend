@@ -1,4 +1,5 @@
 import React from 'react'
+import TableListEvent from './TableListEvent'
 
 const SideBars = () => {
   return (
@@ -34,22 +35,7 @@ const SideBars = () => {
                             
                         </ul>
                     </li>
-                    <li>
-                        <a href="#" className="nav-link px-0 align-middle">
-                            <i className="fs-4 bi-table"></i> <span className="ms-1 d-none d-sm-inline">Orders</span></a>
-                    </li>
-                    <li>
-                        <a href="#submenu2" data-bs-toggle="collapse" className="nav-link px-0 align-middle ">
-                            <i className="fs-4 bi-bootstrap"></i> <span className="ms-1 d-none d-sm-inline">Bootstrap</span></a>
-                        <ul className="collapse nav flex-column ms-1" id="submenu2" data-bs-parent="#menu">
-                            <li className="w-100">
-                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Item</span> 1</a>
-                            </li>
-                            <li>
-                                <a href="#" className="nav-link px-0"> <span className="d-none d-sm-inline">Item</span> 2</a>
-                            </li>
-                        </ul>
-                    </li>
+                    
                     <li>
                         <a href="#submenu3" data-bs-toggle="collapse" className="nav-link px-0 align-middle">
                             <i className="fs-4 bi-grid"></i> <span className="ms-1 d-none d-sm-inline">Products</span> </a>
@@ -92,7 +78,7 @@ const SideBars = () => {
             </div>
         </div>
         <div className="col py-3">
-            Content area...
+            <TableListEvent />
         </div>
     </div>
 </div>
