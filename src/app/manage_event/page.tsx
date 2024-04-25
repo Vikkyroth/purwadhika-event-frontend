@@ -1,5 +1,6 @@
 import SideBars from "@/components/SideBars";
 
+
 const manage_event = () => {
   return (
     <>
