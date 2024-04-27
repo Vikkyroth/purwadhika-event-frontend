@@ -1,13 +1,25 @@
-import events from '@/data/events.json'
+import { EVENTS_URL } from "@/constants";
 import Image from 'next/image'
 import Link from 'next/link'
+
+const fetchEventBySlug = async (slug: string) => {
+  try {
+    const res = await fetch(`${EVENTS_URL}/slug/${slug}`);
+    const data = await res.json();
+    const event = data.data;
+
+    return event;
+  } catch (err) {
+    console.error(err);
+  }
+}
 
 type Props = {
   slug: string
 }
 
-const EventDetail = ({ slug }: Props) => {
-  const event = events.find(evt => evt.slug === slug)
+const EventDetail = async ({ slug }: Props) => {
+  const event = await fetchEventBySlug(slug);
 
   if (!event) {
     return (
