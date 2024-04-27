@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .hero {
   background-image: url("/assets/images/hero-bg.jpg");
   background-size: cover;

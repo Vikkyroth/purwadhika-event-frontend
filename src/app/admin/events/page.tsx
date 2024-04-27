@@ -1,9 +1,11 @@
-import React from 'react'
 import { EVENTS_URL } from "@/constants";
+import Link from "next/link";
 
 const fetchEvents = async () => {
   try {
-    const res = await fetch(EVENTS_URL);
+    const res = await fetch(EVENTS_URL, {
+      cache: 'no-store' 
+    });
     const data = await res.json();
     const events = data.data;
     
@@ -13,12 +15,13 @@ const fetchEvents = async () => {
   }
 }
 
-const TableListEvent = async () => {
+const EventsAdminPage = async () => {
   const events = await fetchEvents();
 
   return (
     <>
-    <button className="btn btn-primary me-md-2" type="button">Add</button>
+    <h1 className="mb-5">Events</h1>
+    <Link href="/admin/events/create" className="btn btn-primary me-md-2 mb-3" type="button">Add</Link>
     <table className="table table-striped">
   <thead>
     <tr>
@@ -42,11 +45,10 @@ const TableListEvent = async () => {
             </td>
           </tr>
           ))}
-    
   </tbody>
 </table>
 </>
   )
 }
 
-export default TableListEvent
+export default EventsAdminPage
